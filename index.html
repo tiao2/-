@@ -8,7 +8,7 @@
 <body>
     <h2>微风周刊官网</h2>
     输入你想看的期数:<input id='input' placeholder='输入数字…'/><button onclick='tj()'>提交</button>
-    <iframe style='border: 1px solid #ccc' src='docs/1.txt' id='zw'></iframe>
+    <br/><iframe style='width:100%;' src='docs/1.txt' id='zw'></iframe>
     <script>
        function tj(){
           document.getElementById('zw').src='docs/'+document.getElementById('input').value+'.txt';
