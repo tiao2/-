@@ -1,1 +1,18 @@
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>微风周刊</title>
+</head>
+<body>
+    <h2>微风周刊官网</h2>
+    输入你想看的期数:<input id='input' placeholder='输入数字…'/><button onclick='tj()'>提交</button>
+    <div style='border: 1px solid #ccc' src='docs/1.txt' id='zw'></div>
+    <script>
+       function tj(){
+          document.getElementById('zw').src='docs/'+document.getElementById('input').value+'.txt';
+        }
+    </script>
+</body>
+</html>
