@@ -24,7 +24,7 @@ fetch(url)
   .then(data => {
    // console.log(data); 这里是JSON对象
     // 处理data
-      document.getElementById('inf').innerHTML='<a href="'+data.link+'">在物理实验室查看</a><br/>发布时间:'+data.time+'<br/>链接数量:'+data["link-time"]+'<br/>字数:'+data.word;
+      document.getElementById('inf').innerHTML='<a href="'+data.link+'">在物理实验室查看</a><br/>发布时间:'+data.time+'<br/>链接数量:'+data["link-time"]+'<br/>字数:'+data.words;
   })
   .catch(error => {
     document.write('<h1>Page can't display</h1>There has been a problem with your fetch operation.');
