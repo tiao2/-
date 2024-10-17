@@ -10,24 +10,12 @@
     输入你想看的期数:<input id='input' placeholder='输入数字…'/><button onclick='tj()'>提交</button>
     <br/><br/><iframe style='height:50%;width:100%;' src='docs/1.html' id='zw'></iframe>
     <div>信息:<pre id="inf"></pre></div>
+    <script src="inf.js"></script>
     <script>
        function tj(){
-          document.getElementById('zw').src='docs/'+document.getElementById('input').value+'.html';
-           const url = 'informations/'+document.getElementById('input').value+'.json'; // 替换为你的JSON链接 
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      document.write('<h1>' + response.statusText + '</h1><h2>运行时出现错误</h2>');
-    }
-    return response.json(); // 解析JSON
-  })
-  .then(data => {
-   // console.log(data); 这里是JSON对象
-    // 处理data
+      document.getElementById('zw').src='docs/'+document.getElementById('input').value+'.html';
+      var data=inf(document.getElementById('input').value);
       document.getElementById('inf').innerHTML='<a href="'+data.link+'">在物理实验室查看</a><br/>发布时间:'+data.time+'<br/>链接数量:'+data["link-number"]+'<br/>字数:'+data.words;
-  })
-  .catch(error => {
-    document.write('<h1>Page can't display</h1>There has been a problem with your fetch operation.');
   });
 
         }
