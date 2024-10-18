@@ -14,5 +14,10 @@ return [{
   "time": "2023-04-21 01:29:51.000",
   "link-number": 0,
   "words": 1260
+},{
+  "link": "",
+  "time": "",
+  "link-number": 0,
+  "words": 0
 }][eval(n)-1];
 }
