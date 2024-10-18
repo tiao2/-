@@ -10,7 +10,7 @@
         <img id='logo' height="10%" width="10%"/>
     </div>
     <h2>微风周刊官网</h2>
-    输入你想看的期数:<input id='input' placeholder='输入数字…'/><button onclick='tj()'>提交</button>
+    输入你想看的期数:<input id='input' placeholder='输入数字…'/><button onclick='tj()'>提交</button><button onclick="qp()">全屏显示</button>
     <br/><br/><iframe style='height:400px;width:100%;' src='docs/1.html' id='zw'></iframe>
     <div>信息:<pre id="inf"></pre></div>
     <script src="inf.js"></script>
@@ -19,6 +19,9 @@
       document.getElementById('zw').src='docs/'+document.getElementById('input').value+'.html';
       var data=inf(document.getElementById('input').value);
       document.getElementById('inf').innerHTML='<a href="'+data.link+'">在物理实验室查看</a><br/>发布时间:'+data.time+'<br/>链接数量:'+data["link-number"]+'<br/>字数:'+data.words;
+        }
+        function qp(){
+         location.href='docs/'+document.getElementById('input').value+'.html';
         }
        document.getElementById('input').value='1';tj(); 
     </script>
